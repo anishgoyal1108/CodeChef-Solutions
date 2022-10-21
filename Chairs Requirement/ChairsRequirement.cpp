@@ -89,11 +89,8 @@ lli power(lli a,lli b) {
 
 void solve(int testcase) {
   lli x, y, z;
-  cin >> x >> y;
-  if (x >=y)
-  cout << (x-y);
-  else
-  cout << 0;
+  cin >> x >> y >> z;
+  cout << (4*x+2*y);
   nl;
 }
 
