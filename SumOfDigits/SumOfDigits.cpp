@@ -88,24 +88,25 @@ lli power(lli a,lli b) {
 }
 
 void solve(int testcase) {
-ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.precision(2);
-
-    int a;
-    float b;
-    cin >> a >> b;
-    if ((a%5==0) && (b-a-0.5>=0))
-      cout << fixed << b-a-0.5 << endl;
-    else
-      cout << fixed << b << endl;
+  int n;
+  cin >> n;
+  int sum = 0;
+  while (n != 0) {
+      int r = n%10;
+      sum += r;
+      n /= 10;
+  }
+  cout << sum;
+  nl;
 }
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  for(int testcase=0; testcase<1; testcase++) {
+  lli testcases;
+  cin>>testcases;
+  for(int testcase=0; testcase<testcases; testcase++) {
     solve(testcase);
   }
 }

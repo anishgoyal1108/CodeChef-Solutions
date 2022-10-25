@@ -3,6 +3,7 @@
 #include<map>
 #include<algorithm>
 #include<set>
+#include<cmath>
 #include<cstring>
 #include<numeric>
 
@@ -60,8 +61,7 @@ void input(vector<T> &arr,lli n) {
 }
 
 template <typename T>
-void output(vector<T> arr) {
-  for(auto x:arr) cout<<x<<" ";
+void output(vector<T> arr) {  for(auto x:arr) cout<<x<<" ";
   cout<<endl;
 }
 
@@ -88,24 +88,22 @@ lli power(lli a,lli b) {
 }
 
 void solve(int testcase) {
-ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.precision(2);
-
-    int a;
-    float b;
-    cin >> a >> b;
-    if ((a%5==0) && (b-a-0.5>=0))
-      cout << fixed << b-a-0.5 << endl;
-    else
-      cout << fixed << b << endl;
+  double a, b, c, d;
+  cin >> a >> b >> c >> d;
+  if (pow(a, 2)/pow(c, 3) == pow(b, 2)/pow(d, 3))
+    cout << "YES";
+  else
+    cout << "NO";
+  nl;
 }
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  for(int testcase=0; testcase<1; testcase++) {
+  lli testcases;
+  cin>>testcases;
+  for(int testcase=0; testcase<testcases; testcase++) {
     solve(testcase);
   }
 }

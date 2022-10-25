@@ -4,6 +4,7 @@
 #include<algorithm>
 #include<set>
 #include<cstring>
+#include<string>
 #include<numeric>
 
 using namespace std;
@@ -88,24 +89,26 @@ lli power(lli a,lli b) {
 }
 
 void solve(int testcase) {
-ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.precision(2);
-
-    int a;
-    float b;
-    cin >> a >> b;
-    if ((a%5==0) && (b-a-0.5>=0))
-      cout << fixed << b-a-0.5 << endl;
-    else
-      cout << fixed << b << endl;
+  char a;
+  cin >> a;
+  if (tolower(a) == 'b')
+    cout << "BattleShip";
+  else if (tolower(a) == 'c')
+    cout << "Cruiser";
+  else if (tolower(a) == 'd')
+    cout << "Destroyer";
+  else
+    cout << "Frigate";
+  nl;
 }
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  for(int testcase=0; testcase<1; testcase++) {
+  lli testcases;
+  cin>>testcases;
+  for(int testcase=0; testcase<testcases; testcase++) {
     solve(testcase);
   }
 }

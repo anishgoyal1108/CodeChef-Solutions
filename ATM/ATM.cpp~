@@ -89,7 +89,7 @@ lli power(lli a,lli b) {
 
 void solve(int testcase) {
   int x;
-  double y;
+  float y;
   cout.setf(ios::fixed);
   cout.setf(ios::showpoint);
   cout.precision(2);
